@@ -27,7 +27,7 @@ module ApmTraceable
 
       def resource_name(context_class)
         # include 先のクラス名を利用して `admin.users_controller` のような文字列を作る
-        context_class.name.underscore&.tr('/', '.')
+        (context_class&.name || 'UnknownClass').underscore&.tr('/', '.')
       end
     end
   end
