@@ -1,28 +1,35 @@
 # ApmTraceable::Datadog
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/apm_traceable/datadog`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/apm_traceable-datadog.svg)](https://badge.fury.io/rb/apm_traceable-datadog)
+[![Build Status](https://github.com/kokuyouwind/apm_traceable-datadog/actions/workflows/main.yml/badge.svg)](https://github.com/kokuyouwind/apm_traceable-datadog/actions/workflows/main.yml)
 
-TODO: Delete this and the text above, and describe your gem
+[APM Traceable gem](https://github.com/kokuyouwind/apm_traceable) の [Datadog APM](https://docs.datadoghq.com/ja/tracing/) 用アダプターです。
 
 ## Installation
 
-Add this line to your application's Gemfile:
+APM Traceable とこのgemの2つを Gemfile に記述します。
+
 
 ```ruby
-gem 'apm_traceable-datadog'
+gem 'apm_traceable'
+gem 'apm_traceable-datadog' # Datadogの場合
 ```
 
-And then execute:
+その後、以下を実行してください。
 
     $ bundle install
 
-Or install it yourself as:
+アダプタを設定する際、Datadog APM のサービス名を `service_name` に指定してください。
 
-    $ gem install apm_traceable-datadog
+```ruby
+ApmTraceable.configure do |config|
+  config.adapter = 'datadog', { service_name: 'test_service' }
+end
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+利用方法は [APM Traceable の README](https://github.com/kokuyouwind/apm_traceable#usage) を参照してください。
 
 ## Development
 
@@ -32,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/apm_traceable-datadog.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kokuyouwind/apm_traceable-datadog.
 
 ## License
 
