@@ -31,6 +31,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activesupport', '>= 7.0.0'
   spec.add_dependency 'apm_traceable', '>= 1.0.0'
-  spec.add_dependency 'ddtrace', '~> 1.14.0'
+  spec.add_dependency 'ddtrace', '>= 1.14.0'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
