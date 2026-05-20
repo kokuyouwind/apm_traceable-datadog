@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activesupport', '>= 7.0.0'
   spec.add_dependency 'apm_traceable', '>= 1.0.0'
+  spec.add_dependency 'concurrent-ruby', '>= 1.3.0'
   spec.add_dependency 'datadog', '>= 2.2.0'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
